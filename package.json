@@ -1,0 +1,24 @@
+{
+  "name": "team_card_generator_8.2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xnd0/Team_Card_Generator_8.2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xnd0/Team_Card_Generator_8.2/issues"
+  },
+  "homepage": "https://github.com/xnd0/Team_Card_Generator_8.2#readme",
+  "dependencies": {
+    "inquirer": "^9.0.0",
+    "jest": "^28.1.1"
+  }
+}
