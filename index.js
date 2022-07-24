@@ -5,12 +5,12 @@
 const inquirer = require("inquirer");
 
 
-const Manager = require("./Manager");
-const Employee = require("./Employee");
-const Engineer = require("./Engineer");
-const Intern = require("./Intern");
 
 
+const Manager = require("./lib/Manager");
+const Employee = require("./lib/Employee");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 
 
