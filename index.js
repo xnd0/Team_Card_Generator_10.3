@@ -13,6 +13,9 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
 
+let teamMemberObjArr = []
+
+
 
 const init = () => {
     const createManager = () => {
@@ -48,8 +51,17 @@ const init = () => {
                     answers.officeNumber
                 );
                 teamMemberObjArr.push(manager)
-                addEmployees()
-            })
+
+                console.log(manager.id + "... manager.id");
+                console.log(manager.name + "... manager.name");
+                console.log(manager.email + "... manager.email");
+                console.log(manager.officeNumber + "... manager.officeNumber");
+                // console.log(teamMemberObjArr + "... is teamMemberObjArr");
+
+                // addEmployees()
+
+            });
+            
 
     };
 
