@@ -18,6 +18,8 @@ let teamMemberObjArr = []
 
 
 const init = () => {
+
+    // -- Create Manager Class
     const createManager = () => {
         inquirer.prompt(
             [
@@ -61,11 +63,62 @@ const init = () => {
                 // addEmployees()
 
             });
-            
+
 
     };
 
-    createManager();
+
+// -- Create Engineer Class
+    const createEngineer = () => {
+        inquirer.prompt(
+            [
+                {
+                    type: 'input',
+                    message: 'What is the ID number?',
+                    name: 'id',
+                },
+                {
+                    type: 'input',
+                    name: 'name',
+                    message: 'What is the Engineer\'s name?',
+                },
+
+                {
+                    type: 'input',
+                    message: 'What is the Engineer\'s email address?',
+                    name: 'email',
+                },
+                {
+                    type: 'input',
+                    message: 'What is the Engineer\'s github username?',
+                    name: 'github',
+                },
+            ])
+            .then(answers => {
+                const engineer = new Engineer(
+                    answers.id,
+                    answers.name,
+                    answers.email,
+                    answers.github
+                );
+                teamMemberObjArr.push(engineer)
+
+                console.log(engineer.id + "... engineer.id");
+                console.log(engineer.name + "... engineer.name");
+                console.log(engineer.email + "... engineer.email");
+                console.log(engineer.github + "... engineer.Gitgub");
+                // console.log(teamMemberObjArr + "... is teamMemberObjArr");
+
+                // addEmployees()
+
+            });
+
+
+    };
+
+    createEngineer();
+    // createManager();
+
 };
 
 
