@@ -68,7 +68,7 @@ const init = () => {
     };
 
 
-// -- Create Engineer Class
+    // -- Create Engineer Class
     const createEngineer = () => {
         inquirer.prompt(
             [
@@ -116,7 +116,57 @@ const init = () => {
 
     };
 
-    createEngineer();
+
+    // -- Create Intern Class
+    const createIntern = () => {
+        inquirer.prompt(
+            [
+                {
+                    type: 'input',
+                    message: 'What is the ID number?',
+                    name: 'id',
+                },
+                {
+                    type: 'input',
+                    name: 'name',
+                    message: 'What is the Intern\'s name?',
+                },
+
+                {
+                    type: 'input',
+                    message: 'What is the Intern\'s email address?',
+                    name: 'email',
+                },
+                {
+                    type: 'input',
+                    message: 'What is/was the Intern\'s school?',
+                    name: 'school',
+                },
+            ])
+            .then(answers => {
+                const intern = new Intern(
+                    answers.id,
+                    answers.name,
+                    answers.email,
+                    answers.school
+                );
+                teamMemberObjArr.push(intern)
+
+                console.log(intern.id + "... intern.id");
+                console.log(intern.name + "... intern.name");
+                console.log(intern.email + "... intern.email");
+                console.log(intern.school + "... intern.school");
+                // console.log(teamMemberObjArr + "... is teamMemberObjArr");
+
+                // addEmployees()
+
+            });
+
+
+    };
+
+    createIntern();
+    // createEngineer();
     // createManager();
 
 };
