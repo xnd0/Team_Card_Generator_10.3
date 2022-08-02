@@ -76,6 +76,8 @@ const init = () => {
                 console.log(manager.officeNumber + "... manager.officeNumber");
                 // console.log(teamMemberObjArr + "... is teamMemberObjArr");
 
+                teamMemberObjArr.push(generateManagerCard(manager));
+
                 // addEmployees()
 
             });
@@ -124,6 +126,8 @@ const init = () => {
                 console.log(engineer.email + "... engineer.email");
                 console.log(engineer.github + "... engineer.Gitgub");
                 // console.log(teamMemberObjArr + "... is teamMemberObjArr");
+
+                teamMemberObjArr.push(generateEngineerCard(engineer));
 
                 // addEmployees()
 
@@ -185,8 +189,8 @@ const init = () => {
     };
 
 
-
-
+    // createManager();
+    // createEngineer();
     createIntern();
     // createEngineer();
     // createManager();

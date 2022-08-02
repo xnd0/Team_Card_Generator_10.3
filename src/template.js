@@ -72,7 +72,6 @@ const generateManagerCard = (manager) => {
     margin: 0;
   }
   body a{
-    background-color: rgb(32, 70, 107);
     outline: none;
     text-decoration: none;
     list-style: none;
