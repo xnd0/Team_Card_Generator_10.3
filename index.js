@@ -3,7 +3,8 @@
 // ---------------------------- //
 
 const inquirer = require("inquirer");
-
+const fs = require("fs");
+const path = require("path");
 
 
 
@@ -13,8 +14,23 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
 
+const {
+    generateEngineerCard,
+    generateManagerCard,
+    generateInternCard,
+    baseHtml
+  } = require("./src/template");
+
+
+
 let teamMemberObjArr = []
 
+
+function generateFile() {
+    fs.writeFile("./dist/index.html", baseHtml(teamMemberObjArr), (error) => {
+        error ? console.log(error) : console.log("SUCCESS!")
+    })
+};
 
 
 const init = () => {
@@ -150,13 +166,16 @@ const init = () => {
                     answers.email,
                     answers.school
                 );
-                teamMemberObjArr.push(intern)
+                // teamMemberObjArr.push(intern)
+                teamMemberObjArr.push(generateInternCard(intern));
 
                 console.log(intern.id + "... intern.id");
                 console.log(intern.name + "... intern.name");
                 console.log(intern.email + "... intern.email");
                 console.log(intern.school + "... intern.school");
                 // console.log(teamMemberObjArr + "... is teamMemberObjArr");
+
+                generateFile();
 
                 // addEmployees()
 
@@ -165,9 +184,19 @@ const init = () => {
 
     };
 
+
+
+
     createIntern();
     // createEngineer();
     // createManager();
+    // function generateFile() {
+    //     fs.writeFile("./dist/index.html", baseHtml(teamMemberObjArr), (error) => {
+    //       error ? console.log(error) : console.log("file created!")
+    //     })
+    //   }
+
+    // generateFile();  
 
 };
 
