@@ -19,7 +19,7 @@ const {
     generateManagerCard,
     generateInternCard,
     baseHtml
-  } = require("./src/template");
+} = require("./src/template");
 
 
 
@@ -34,6 +34,9 @@ function generateFile() {
 
 
 const init = () => {
+
+    // --- Place an await / promise thing here?
+
 
     // -- Create Manager Class
     const createManager = () => {
@@ -80,11 +83,11 @@ const init = () => {
 
                 // addEmployees()
 
+
             });
 
 
     };
-
 
     // -- Create Engineer Class
     const createEngineer = () => {
@@ -179,7 +182,7 @@ const init = () => {
                 console.log(intern.school + "... intern.school");
                 // console.log(teamMemberObjArr + "... is teamMemberObjArr");
 
-                generateFile();
+                // generateFile();
 
                 // addEmployees()
 
@@ -188,10 +191,36 @@ const init = () => {
 
     };
 
+    // async function main() {
+    //     const ans = await
+    // }
+    function startMenu() {
+        inquirer.prompt([{
+            type: 'list',
+            name: 'addRole',
+            message: 'Welcome to the Team Card Generator v10.3. Please make a selection:',
+            choices: ['Add Manager', 'Add Engineer', 'Add Intern', "Create HTML Page"]
+        },
+        ])
+            .then(answers => {
+                switch (answers.addRole) {
+                    case "Manager":
+                        return createManager();
+                    case "Engineer":
+                        return createEngineer();
+                    case "Intern":
+                        return createIntern();;
+                    default:
+                        return generateFile();
+                }
+            })
+    }
+
+    startMenu();
 
     // createManager();
     // createEngineer();
-    createIntern();
+    // createIntern();
     // createEngineer();
     // createManager();
     // function generateFile() {
