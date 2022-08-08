@@ -40,11 +40,11 @@ const generateManagerCard = (manager) => {
   const generateInternCard = (intern) => {
     return `
         <div class="card">
-          <h3>${intern.getName()}</h3>
+          <h3>${intern.getId()}</h3>
           <p><i class="fa-solid fa-user-graduate"></i>${intern.getRole()}</p>
           <div class="card-body">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID: ${intern.getId()}</li>
+              <li class="list-group-item">ID: ${intern.getName()}</li>
               <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a>
               </li>
               <li class="list-group-item">School: ${intern.getSchool()}</li>
