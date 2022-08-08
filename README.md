@@ -8,10 +8,9 @@ A Node.js command-line application that takes in information about employees on 
 <br><br>
 
 ## Video Demo: <br>
+https://www.loom.com/share/5cbf6da0363a4e73addeaf622a9ba84d
 
--video demo here-
-
-## Links: <br>
+## Link: <br>
 repo: https://github.com/xnd0/Team_Card_Generator_10.3
 <br>
 video: https://www.loom.com/share/5cbf6da0363a4e73addeaf622a9ba84d
