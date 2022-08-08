@@ -69,10 +69,10 @@ const init = () => {
                     answers.officeNumber
                 );
 
-                console.log(manager.id + "... manager.id");
-                console.log(manager.name + "... manager.name");
-                console.log(manager.email + "... manager.email");
-                console.log(manager.officeNumber + "... manager.officeNumber");
+                // console.log(manager.id + "... manager.id");
+                // console.log(manager.name + "... manager.name");
+                // console.log(manager.email + "... manager.email");
+                // console.log(manager.officeNumber + "... manager.officeNumber");
 
                 teamMemberObjArr.push(generateManagerCard(manager));
 
@@ -116,10 +116,10 @@ const init = () => {
                     answers.github
                 );
 
-                console.log(engineer.id + "... engineer.id");
-                console.log(engineer.name + "... engineer.name");
-                console.log(engineer.email + "... engineer.email");
-                console.log(engineer.github + "... engineer.Gitgub");
+                // console.log(engineer.id + "... engineer.id");
+                // console.log(engineer.name + "... engineer.name");
+                // console.log(engineer.email + "... engineer.email");
+                // console.log(engineer.github + "... engineer.Gitgub");
 
                 teamMemberObjArr.push(generateEngineerCard(engineer));
 
@@ -166,10 +166,10 @@ const init = () => {
 
                 teamMemberObjArr.push(generateInternCard(intern));
 
-                console.log(intern.id + "... intern.id");
-                console.log(intern.name + "... intern.name");
-                console.log(intern.email + "... intern.email");
-                console.log(intern.school + "... intern.school");
+                // console.log(intern.id + "... intern.id");
+                // console.log(intern.name + "... intern.name");
+                // console.log(intern.email + "... intern.email");
+                // console.log(intern.school + "... intern.school");
 
                 startMenu();
             });
