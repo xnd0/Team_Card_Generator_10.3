@@ -47,12 +47,12 @@ const init = () => {
                 {
                     type: 'input',
                     name: 'name',
-                    message: 'What is the managers name?',
+                    message: 'What is the Manager\'s name?',
                 },
 
                 {
                     type: 'input',
-                    message: 'What is your preferred method of communication?',
+                    message: 'What is the Manager\'s Email?',
                     name: 'email',
                 },
                 {
@@ -68,7 +68,6 @@ const init = () => {
                     answers.email,
                     answers.officeNumber
                 );
-                teamMemberObjArr.push(manager)
 
                 console.log(manager.id + "... manager.id");
                 console.log(manager.name + "... manager.name");
@@ -116,7 +115,6 @@ const init = () => {
                     answers.email,
                     answers.github
                 );
-                teamMemberObjArr.push(engineer)
 
                 console.log(engineer.id + "... engineer.id");
                 console.log(engineer.name + "... engineer.name");
@@ -204,7 +202,7 @@ const init = () => {
     }
 
     startMenu();
-    
+
 };
 
 
