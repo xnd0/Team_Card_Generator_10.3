@@ -12,8 +12,6 @@ https://www.loom.com/share/5cbf6da0363a4e73addeaf622a9ba84d
 
 ## Link: <br>
 repo: https://github.com/xnd0/Team_Card_Generator_10.3
-<br>
-video: https://www.loom.com/share/5cbf6da0363a4e73addeaf622a9ba84d
 <br><br>
 
 ## Screenshots:
