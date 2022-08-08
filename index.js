@@ -35,9 +35,6 @@ function generateFile() {
 
 const init = () => {
 
-    // --- Place an await / promise thing here?
-
-
     // -- Create Manager Class
     const createManager = () => {
         inquirer.prompt(
@@ -77,13 +74,10 @@ const init = () => {
                 console.log(manager.name + "... manager.name");
                 console.log(manager.email + "... manager.email");
                 console.log(manager.officeNumber + "... manager.officeNumber");
-                // console.log(teamMemberObjArr + "... is teamMemberObjArr");
 
                 teamMemberObjArr.push(generateManagerCard(manager));
 
-                // addEmployees()
-
-
+                startMenu();
             });
 
 
@@ -128,12 +122,10 @@ const init = () => {
                 console.log(engineer.name + "... engineer.name");
                 console.log(engineer.email + "... engineer.email");
                 console.log(engineer.github + "... engineer.Gitgub");
-                // console.log(teamMemberObjArr + "... is teamMemberObjArr");
 
                 teamMemberObjArr.push(generateEngineerCard(engineer));
 
-                // addEmployees()
-
+                startMenu();
             });
 
 
@@ -173,27 +165,22 @@ const init = () => {
                     answers.email,
                     answers.school
                 );
-                // teamMemberObjArr.push(intern)
+
                 teamMemberObjArr.push(generateInternCard(intern));
 
                 console.log(intern.id + "... intern.id");
                 console.log(intern.name + "... intern.name");
                 console.log(intern.email + "... intern.email");
                 console.log(intern.school + "... intern.school");
-                // console.log(teamMemberObjArr + "... is teamMemberObjArr");
 
-                // generateFile();
-
-                // addEmployees()
-
+                startMenu();
             });
 
 
     };
 
-    // async function main() {
-    //     const ans = await
-    // }
+
+    // -- Start Menu Function -- //
     function startMenu() {
         inquirer.prompt([{
             type: 'list',
@@ -202,37 +189,23 @@ const init = () => {
             choices: ['Add Manager', 'Add Engineer', 'Add Intern', "Create HTML Page"]
         },
         ])
-            .then(answers => {
-                switch (answers.addRole) {
-                    case "Manager":
+            .then(ans => {
+                switch (ans.addRole) {
+                    case "Add Manager":
                         return createManager();
-                    case "Engineer":
+                    case "Add Engineer":
                         return createEngineer();
-                    case "Intern":
-                        return createIntern();;
-                    default:
+                    case "Add Intern":
+                        return createIntern();
+                    case "Create HTML Page":
                         return generateFile();
                 }
             })
     }
 
     startMenu();
-
-    // createManager();
-    // createEngineer();
-    // createIntern();
-    // createEngineer();
-    // createManager();
-    // function generateFile() {
-    //     fs.writeFile("./dist/index.html", baseHtml(teamMemberObjArr), (error) => {
-    //       error ? console.log(error) : console.log("file created!")
-    //     })
-    //   }
-
-    // generateFile();  
-
+    
 };
-
 
 
 init();
